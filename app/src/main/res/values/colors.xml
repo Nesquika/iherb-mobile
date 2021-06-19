@@ -4,4 +4,6 @@
     <color name="white">#FFFFFF</color>
     <color name="light_green">#DFEFC3</color>
     <color name="transp_white">#BDFFFFFF</color>
+    <color name="black">#000</color>
+    <color name="orange">#FFC107</color>
 </resources>

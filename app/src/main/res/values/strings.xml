@@ -8,5 +8,23 @@
     <string name="welcome">Добро пожаловать!</string>
     <string name="title_activity_bads">Добавки</string>
     <string name="title_activity_login">Вход</string>
+    <string name="filter">Применить фильтры:</string>
+    <string name="bads">Подборка БАДов</string>
+    <string name="results">Результаты тестирования</string>
+    <string name="returnToBads">Вернуться к списку БАДов</string>
+    <string name="finishTest">Завершить тестирование</string>
+    <string name="res">Завершить тестирование</string>
+    <string name="program">Посмотреть программы</string>
+    <string name="programs">Программы</string>
+
+    <string name="resultMessage">Согласно введённым данным, причиной Ваших "неудобств" может стать недостаток </string>
+    <string name="beforeTest">Предлагаем пройти несложный тест, чтобы подобрать БАД, который подойдёт именно Вам.</string>
+
+    <string-array name="filters">
+        <item>Фильтр 1</item>
+        <item>Фильтр 2</item>
+        <item>Фильтр 3</item>
+        <item>Фильтр 4</item>
+    </string-array>
 
 </resources>

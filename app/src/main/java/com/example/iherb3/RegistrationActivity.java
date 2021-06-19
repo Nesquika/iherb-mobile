@@ -9,20 +9,26 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+import java.time.LocalDate;
+
+public class RegistrationActivity extends AppCompatActivity {
     EditText email, password;
-    Button login;
+    Button login, register;
+    RadioGroup gender;
     boolean isEmail, isPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registration);
 
+        gender = findViewById(R.id.gender);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.login);
+        register = findViewById(R.id.register);
 
         email.addTextChangedListener(new TextWatcher() {
             @Override
@@ -33,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 if (s.length() != 0) isEmail = true;
                 else isEmail = false;
-                changeLoginButton();
+                changeRegisterButton();
             }
         });
 
@@ -46,32 +52,38 @@ public class LoginActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 if (s.length() != 0) isPassword = true;
                 else isPassword = false;
-                changeLoginButton();
+                changeRegisterButton();
+            }
+        });
+
+        gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                changeRegisterButton();
             }
         });
     }
 
-    private void changeLoginButton(){
-        if (isEmail && isPassword) login.setEnabled(true);
-        else login.setEnabled(false);
+
+    public void createProfile(View view){
+        Toast.makeText(getApplicationContext(), "Регистрация завершена успешно!", Toast.LENGTH_SHORT).show();
+        Intent login = new Intent(this, LoginActivity.class);
+        startActivity(login);
     }
 
     public void checkUser(View view){
         String sEmail = email.getText().toString();
         String sPassword = password.getText().toString();
-        if (findUser(sEmail, sPassword)) {
+        /*if (findUser(sEmail, sPassword)) {
             Intent bads = new Intent(this, MainActivity.class);
             bads.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(bads);
-        }
+            Toast.makeText(getApplicationContext(), "Пользователь уже зарегистрирован", Toast.LENGTH_SHORT).show();
+        }*/
     }
 
-    private boolean findUser(String email, String password){
-        return true;
-    }
-
-    public void createProfile(View view){
-        Intent intent = new Intent (this, RegistrationActivity.class);
-        startActivity(intent);
+    private void changeRegisterButton(){
+        if (isEmail && isPassword && gender.getCheckedRadioButtonId() != -1) register.setEnabled(true);
+        else register.setEnabled(false);
     }
 }
