@@ -7,13 +7,4 @@
     <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
         <item name="android:popupBackground">@color/light_green</item>
     </style>
-
-    <style name="Theme.Iherb3.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.Iherb3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Iherb3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 
-//import org.naishadhparmar.zcustomcalendar.CustomCalendar;
-
 public class MainActivity extends AppCompatActivity {
     public int user = -1;
     ImageView menu;
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 return true;
                             case R.id.menu3:
-                                intent = new Intent(getBaseContext(), CustomCalendarActivity.class);
+                                intent = new Intent(getBaseContext(), CalendarActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                 startActivity(intent);
                                 return true;
