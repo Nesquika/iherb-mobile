@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">iherb3</string>
+    <string name="app_name">YouTeam</string>
+
+    <string name="forgot"><u>Забыли пароль?</u></string>
+    <string name="prompt_email">Электронная почта</string>
+    <string name="action_sign_in_short">Пароль</string>
+    <string name="create">Создать аккаунт</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="title_activity_bads">Добавки</string>
+    <string name="title_activity_login">Вход</string>
+
 </resources>
