@@ -7,16 +7,12 @@ import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Toast;
 
-import org.naishadhparmar.zcustomcalendar.CustomCalendar;
-import org.naishadhparmar.zcustomcalendar.OnDateSelectedListener;
-import org.naishadhparmar.zcustomcalendar.OnNavigationButtonClickedListener;
-import org.naishadhparmar.zcustomcalendar.Property;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CustomCalendarActivity extends AppCompatActivity implements OnNavigationButtonClickedListener {
+public class CustomCalendarActivity extends AppCompatActivity{
 
     CustomCalendar customCalendar;
 

@@ -16,6 +16,8 @@
     <string name="res">Завершить тестирование</string>
     <string name="program">Посмотреть программы</string>
     <string name="programs">Программы</string>
+    <string name="withoutSign"><u>Продолжить без входа</u></string>
+    <string name="more">Подробнее</string>
 
     <string name="resultMessage">Согласно введённым данным, причиной Ваших "неудобств" может стать недостаток </string>
     <string name="beforeTest">Предлагаем пройти несложный тест, чтобы подобрать БАД, который подойдёт именно Вам.</string>

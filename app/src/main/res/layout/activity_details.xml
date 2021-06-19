@@ -36,36 +36,44 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/results"
+        android:text="Комплекс"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textAlignment="center"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="42dp"
-        android:textColor="@color/black"/>
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/light_green"
-        android:gravity="center"
-        android:paddingTop="25dp"
-        android:paddingBottom="25dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp">
+        android:background="@drawable/rounded_button"
+        android:layout_margin="10dp">
         <TextView
-            android:id="@+id/resultMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="resultMessage"/>
-        <RadioGroup
-            android:id="@+id/answers"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </RadioGroup>
+            android:layout_height="wrap_content"
+            android:text="Омега-3"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="90dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="способствует очищению стенок сосудов от холестерина" />
+            </RadioGroup>
+        </LinearLayout>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,7 +84,7 @@
             android:layout_weight="1"
             android:layout_margin="25dp"
             android:layout_height="wrap_content"
-            android:text="@string/returnToBads"
+            android:text="Вернуться к программам"
             android:textAllCaps="false"
             android:textSize="14sp"
             android:letterSpacing="0"
@@ -89,11 +97,12 @@
             android:layout_weight="1"
             android:layout_margin="25dp"
             android:layout_height="wrap_content"
-            android:text="@string/program"
+            android:text="Выбрать программу"
             android:textAllCaps="false"
             android:textSize="14sp"
             android:letterSpacing="0"
-            android:padding="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:background="@drawable/orange_button"
             android:onClick="openPrograms"/>
     </LinearLayout>

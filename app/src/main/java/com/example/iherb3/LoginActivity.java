@@ -74,4 +74,10 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent (this, RegistrationActivity.class);
         startActivity(intent);
     }
+
+    public void openBads(View view){
+        Intent bads = new Intent(this, MainActivity.class);
+        bads.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(bads);
+    }
 }

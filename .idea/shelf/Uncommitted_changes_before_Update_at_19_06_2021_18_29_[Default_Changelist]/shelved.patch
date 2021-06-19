@@ -1,0 +1,517 @@
+Index: app/src/main/res/layout/activity_programs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".TestActivity\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        android:background=\"@color/bright_green\"\r\n        android:padding=\"15dp\">\r\n        <ImageView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_height=\"24dp\"\r\n            android:scaleType=\"centerCrop\"\r\n            android:background=\"@drawable/pill\"/>\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"12\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"@string/bads\"\r\n            android:paddingLeft=\"12dp\"/>\r\n        <ImageView\r\n            android:id=\"@+id/menu\"\r\n            android:scaleType=\"centerCrop\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/menu\"/>\r\n    </LinearLayout>\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/programs\"\r\n        android:textAlignment=\"center\"\r\n        android:layout_marginLeft=\"32dp\"\r\n        android:layout_marginRight=\"32dp\"\r\n        android:paddingTop=\"20dp\"\r\n        android:paddingBottom=\"20dp\"\r\n        android:textColor=\"@color/black\"/>\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"vertical\"\r\n        android:background=\"@color/light_green\"\r\n        android:gravity=\"center\"\r\n        android:paddingTop=\"25dp\"\r\n        android:paddingBottom=\"25dp\"\r\n        android:paddingLeft=\"50dp\"\r\n        android:paddingRight=\"50dp\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:layout_marginBottom=\"20dp\">\r\n        <TextView\r\n            android:id=\"@+id/resultMessage\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:textAlignment=\"center\"\r\n            android:text=\"resultMessage\"/>\r\n        <RadioGroup\r\n            android:id=\"@+id/answers\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\">\r\n        </RadioGroup>\r\n    </LinearLayout>\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\">\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_margin=\"25dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"@string/returnToBads\"\r\n            android:textAllCaps=\"false\"\r\n            android:textSize=\"14sp\"\r\n            android:letterSpacing=\"0\"\r\n            android:padding=\"5dp\"\r\n            android:background=\"@drawable/rounded_button\"\r\n            android:onClick=\"openBads\"/>\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:id=\"@+id/programs\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_margin=\"25dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"@string/program\"\r\n            android:textAllCaps=\"false\"\r\n            android:textSize=\"14sp\"\r\n            android:letterSpacing=\"0\"\r\n            android:padding=\"5dp\"\r\n            android:background=\"@drawable/orange_button\"\r\n            android:onClick=\"openPrograms\"/>\r\n    </LinearLayout>\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_programs.xml	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/res/layout/activity_programs.xml	(date 1624112204717)
+@@ -43,58 +43,199 @@
+         android:paddingTop="20dp"
+         android:paddingBottom="20dp"
+         android:textColor="@color/black"/>
++
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:orientation="vertical"
++        android:layout_marginTop="10dp"
++        android:layout_marginBottom="20dp"
+         android:background="@color/light_green"
+         android:gravity="center"
+-        android:paddingTop="25dp"
+-        android:paddingBottom="25dp"
++        android:orientation="vertical"
+         android:paddingLeft="50dp"
++        android:paddingTop="10dp"
+         android:paddingRight="50dp"
+-        android:layout_marginTop="10dp"
+-        android:layout_marginBottom="20dp">
++        android:paddingBottom="10dp">
++
+         <TextView
+-            android:id="@+id/resultMessage"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+-            android:textAlignment="center"
+-            android:text="resultMessage"/>
+-        <RadioGroup
+-            android:id="@+id/answers"
++            android:text="Комплекс 1"
++            android:textAlignment="center" />
++
++        <LinearLayout
+             android:layout_width="match_parent"
+-            android:layout_height="wrap_content">
+-        </RadioGroup>
+-    </LinearLayout>
+-    <LinearLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:orientation="horizontal">
+-        <androidx.appcompat.widget.AppCompatButton
+-            android:layout_width="0dp"
+-            android:layout_weight="1"
+-            android:layout_margin="25dp"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <ImageView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="wrap_content" />
++
++                <ImageView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="70dp" />
++
++                <ImageView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="70dp" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_gravity="center"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="wrap_content"
++                    android:textAlignment="center"
++                    android:text="Омега-3" />
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="wrap_content"
++                    android:textAlignment="center"
++
++                    android:text="Калий и Магний" />
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:textAlignment="center"
++                    android:text="Креатин"
++                    android:layout_height="wrap_content" />
++            </LinearLayout>
++        </LinearLayout>
++
++
++        <androidx.appcompat.widget.AppCompatButton
++            android:id="@+id/btn1"
++            android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+-            android:text="@string/returnToBads"
++            android:background="@drawable/orange_button"
++            android:paddingLeft="35dp"
++            android:paddingRight="35dp"
++            android:layout_marginTop="20dp"
++            android:text="@string/more"
+             android:textAllCaps="false"
+-            android:textSize="14sp"
+-            android:letterSpacing="0"
+-            android:padding="5dp"
+-            android:background="@drawable/rounded_button"
+-            android:onClick="openBads"/>
++            android:onClick=""/>
++    </LinearLayout>
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="10dp"
++        android:layout_marginBottom="20dp"
++        android:background="@color/light_green"
++        android:gravity="center"
++        android:orientation="vertical"
++        android:paddingLeft="50dp"
++        android:paddingTop="10dp"
++        android:paddingRight="50dp"
++        android:paddingBottom="10dp">
++
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="Комплекс 2"
++            android:textAlignment="center" />
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <ImageView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="wrap_content" />
++
++                <ImageView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="70dp" />
++
++                <ImageView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="70dp" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_gravity="center"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal">
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="wrap_content"
++                    android:textAlignment="center"
++                    android:text="Лецитин" />
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:layout_height="wrap_content"
++                    android:textAlignment="center"
++
++                    android:text="Магний" />
++
++                <TextView
++                    android:layout_width="0dp"
++                    android:layout_weight="1"
++                    android:textAlignment="center"
++                    android:text="BCAA"
++                    android:layout_height="wrap_content" />
++            </LinearLayout>
++        </LinearLayout>
++
++
++        <androidx.appcompat.widget.AppCompatButton
++            android:id="@+id/btn2"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:background="@drawable/orange_button"
++            android:paddingLeft="35dp"
++            android:paddingRight="35dp"
++            android:layout_marginTop="20dp"
++            android:text="@string/more"
++            android:textAllCaps="false" />
++    </LinearLayout>
++    <LinearLayout
++        android:layout_gravity="center"
++        android:layout_width="200dp"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal">
+         <androidx.appcompat.widget.AppCompatButton
+-            android:id="@+id/programs"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_margin="25dp"
+             android:layout_height="wrap_content"
+-            android:text="@string/program"
++            android:text="Вернуться ко всем БАДам"
+             android:textAllCaps="false"
+             android:textSize="14sp"
+             android:letterSpacing="0"
+-            android:padding="5dp"
+-            android:background="@drawable/orange_button"
+-            android:onClick="openPrograms"/>
++            android:paddingLeft="15dp"
++            android:paddingRight="15dp"
++            android:background="@drawable/rounded_button"
++            android:onClick="openBads"/>
+     </LinearLayout>
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">YouTeam</string>\r\n\r\n    <string name=\"forgot\"><u>Забыли пароль?</u></string>\r\n    <string name=\"prompt_email\">Электронная почта</string>\r\n    <string name=\"action_sign_in_short\">Пароль</string>\r\n    <string name=\"create\">Создать аккаунт</string>\r\n    <string name=\"welcome\">Добро пожаловать!</string>\r\n    <string name=\"title_activity_bads\">Добавки</string>\r\n    <string name=\"title_activity_login\">Вход</string>\r\n    <string name=\"filter\">Применить фильтры:</string>\r\n    <string name=\"bads\">Подборка БАДов</string>\r\n    <string name=\"results\">Результаты тестирования</string>\r\n    <string name=\"returnToBads\">Вернуться к списку БАДов</string>\r\n    <string name=\"finishTest\">Завершить тестирование</string>\r\n    <string name=\"res\">Завершить тестирование</string>\r\n    <string name=\"program\">Посмотреть программы</string>\r\n    <string name=\"programs\">Программы</string>\r\n\r\n    <string name=\"resultMessage\">Согласно введённым данным, причиной Ваших \"неудобств\" может стать недостаток </string>\r\n    <string name=\"beforeTest\">Предлагаем пройти несложный тест, чтобы подобрать БАД, который подойдёт именно Вам.</string>\r\n\r\n    <string-array name=\"filters\">\r\n        <item>Фильтр 1</item>\r\n        <item>Фильтр 2</item>\r\n        <item>Фильтр 3</item>\r\n        <item>Фильтр 4</item>\r\n    </string-array>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/res/values/strings.xml	(date 1624110909583)
+@@ -16,6 +16,8 @@
+     <string name="res">Завершить тестирование</string>
+     <string name="program">Посмотреть программы</string>
+     <string name="programs">Программы</string>
++    <string name="withoutSign"><u>Продолжить без входа</u></string>
++    <string name="more">Подробнее</string>
+ 
+     <string name="resultMessage">Согласно введённым данным, причиной Ваших "неудобств" может стать недостаток </string>
+     <string name="beforeTest">Предлагаем пройти несложный тест, чтобы подобрать БАД, который подойдёт именно Вам.</string>
+Index: app/src/main/java/com/example/iherb3/TestActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.iherb3;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.appcompat.content.res.AppCompatResources;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport android.content.Intent;\r\nimport android.content.res.ColorStateList;\r\nimport android.graphics.Color;\r\nimport android.os.Bundle;\r\nimport android.view.MenuItem;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.CompoundButton;\r\nimport android.widget.ImageView;\r\nimport android.widget.PopupMenu;\r\nimport android.widget.RadioButton;\r\nimport android.widget.RadioGroup;\r\nimport android.widget.TextView;\r\n\r\npublic class TestActivity extends AppCompatActivity {\r\n    ImageView menu;\r\n    RadioGroup radioGroup;\r\n    TextView question, status;\r\n    String[] questions = {\"Вы пьёте БАДы?\", \"Второй вопрос?\", \"Третий вопрос?\"};\r\n    String[][] answers = {{\"Да, регулярно\", \"Нет, но планирую начать\"},{\"Первый ответ\", \"Второй ответ\"}, {\"Первый ответ\", \"Второй ответ\"}};\r\n    int[] actualAnswers;\r\n    Button finish;\r\n    int count;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_test);\r\n\r\n        menu = findViewById(R.id.menu);\r\n        menu.setOnClickListener(viewClickListener);\r\n\r\n        question = findViewById(R.id.question);\r\n        radioGroup = findViewById(R.id.answers);\r\n        finish = findViewById(R.id.finish);\r\n        status = findViewById(R.id.status);\r\n        count = 0;\r\n        setFields(count);\r\n\r\n        actualAnswers = new int[questions.length];\r\n    }\r\n    View.OnClickListener viewClickListener = new View.OnClickListener() {\r\n        @Override\r\n        public void onClick(View v) {\r\n            showPopupMenu(v);\r\n        }\r\n    };\r\n\r\n    private void showPopupMenu(View v) {\r\n        PopupMenu popupMenu = new PopupMenu(this, v);\r\n        popupMenu.inflate(R.menu.popupmenu);\r\n\r\n        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {\r\n            @Override\r\n            public boolean onMenuItemClick(MenuItem item) {\r\n                Intent intent;\r\n                switch (item.getItemId()) {\r\n                    case R.id.menu1:\r\n                        intent = new Intent(getBaseContext(), ProfileActivity.class);\r\n                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);\r\n                        startActivity(intent);\r\n                        return true;\r\n                    case R.id.menu2:\r\n                        intent = new Intent(getBaseContext(), TestActivity.class);\r\n                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);\r\n                        startActivity(intent);\r\n                        return true;\r\n                    case R.id.menu3:\r\n                        intent = new Intent(getBaseContext(), CalendarActivity.class);\r\n                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);\r\n                        startActivity(intent);\r\n                        return true;\r\n                    default:\r\n                        return false;\r\n                }\r\n\r\n            }\r\n        });\r\n\r\n        popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {\r\n            @Override\r\n            public void onDismiss(PopupMenu menu) {}\r\n        });\r\n        popupMenu.show();\r\n    }\r\n    private void setFields(int num){\r\n        question.setText(questions[num]);\r\n        radioGroup.removeAllViews();\r\n        for (int i = 0; i < radioGroup.getChildCount(); i++){\r\n            radioGroup.removeViewAt(i);\r\n        }\r\n        status.setText(\"Вопрос \"+ (num+1) + \" из \" + questions.length);\r\n        for (int i = 0; i < answers[num].length; i++) {\r\n            RadioButton rb = new RadioButton(this);\r\n            rb.setText(answers[num][i]);\r\n            RadioGroup.LayoutParams lp = new RadioGroup.LayoutParams(RadioGroup.LayoutParams.MATCH_PARENT, RadioGroup.LayoutParams.WRAP_CONTENT);\r\n            lp.setMargins(0,30,0,0);\r\n            rb.setLayoutParams(lp);\r\n            rb.setBackground(AppCompatResources.getDrawable(this, R.drawable.radio));\r\n            rb.setButtonTintList(new ColorStateList(\r\n                    new int[][]{\r\n                            new int[]{-android.R.attr.state_enabled},\r\n                            new int[]{android.R.attr.state_enabled}},\r\n                    new int[] {\r\n                            Color.WHITE,Color.BLACK})\r\n            );\r\n            rb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){\r\n                @Override\r\n                public void onCheckedChanged(CompoundButton rb, boolean isChecked){\r\n                    if (isChecked) {\r\n                        rb.setBackground(AppCompatResources.getDrawable(getBaseContext(), R.drawable.radio_active));\r\n                        finish.setEnabled(true);\r\n                    }\r\n                    else {\r\n                        rb.setBackground(AppCompatResources.getDrawable(getBaseContext(), R.drawable.radio));\r\n                        //finish.setEnabled(false);\r\n                    }\r\n                }\r\n            });\r\n            radioGroup.addView(rb);\r\n        }\r\n    }\r\n    public void openBads(View view){\r\n        Intent intent = new Intent(this, MainActivity.class);\r\n        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);\r\n        startActivity(intent);\r\n    }\r\n\r\n    public void openPreviousQuestion(View view){\r\n        if (count < 1) return;\r\n        count--;\r\n        setFields(count);\r\n        checkButton();\r\n    }\r\n\r\n    public void openNextQuestion(View view){\r\n        if (count > questions.length-2) return;\r\n        saveAnswer();\r\n        count++;\r\n        setFields(count);\r\n        checkButton();\r\n    }\r\n\r\n    private void checkButton() {\r\n        if (count == questions.length-1) {\r\n            finish.setText(getResources().getString(R.string.finishTest));\r\n            finish.setOnClickListener(this::finishTest);\r\n        } else {\r\n            finish.setText(\"Следующий вопрос\");\r\n            finish.setOnClickListener(this::openNextQuestion);\r\n        }\r\n    }\r\n\r\n    public void finishTest(View view){\r\n        saveAnswer();\r\n        Intent intent = new Intent(this, ResultActivity.class);\r\n        startActivity(intent);\r\n    }\r\n\r\n    private void saveAnswer(){\r\n        int radioButtonID = radioGroup.getCheckedRadioButtonId();\r\n        View radioButton = radioGroup.findViewById(radioButtonID);\r\n        int idx = radioGroup.indexOfChild(radioButton);\r\n        actualAnswers[count] = idx;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/iherb3/TestActivity.java	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/java/com/example/iherb3/TestActivity.java	(date 1624095766597)
+@@ -97,6 +97,7 @@
+             radioGroup.removeViewAt(i);
+         }
+         status.setText("Вопрос "+ (num+1) + " из " + questions.length);
++        finish.setEnabled(false);
+         for (int i = 0; i < answers[num].length; i++) {
+             RadioButton rb = new RadioButton(this);
+             rb.setText(answers[num][i]);
+Index: app/src/main/java/com/example/iherb3/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.iherb3;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.text.Editable;\r\nimport android.text.TextWatcher;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\n\r\npublic class LoginActivity extends AppCompatActivity {\r\n    EditText email, password;\r\n    Button login;\r\n    boolean isEmail, isPassword;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_login);\r\n\r\n        email = findViewById(R.id.email);\r\n        password = findViewById(R.id.password);\r\n        login = findViewById(R.id.login);\r\n\r\n        email.addTextChangedListener(new TextWatcher() {\r\n            @Override\r\n            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}\r\n            @Override\r\n            public void onTextChanged(CharSequence s, int start, int before, int count) {}\r\n            @Override\r\n            public void afterTextChanged(Editable s) {\r\n                if (s.length() != 0) isEmail = true;\r\n                else isEmail = false;\r\n                changeLoginButton();\r\n            }\r\n        });\r\n\r\n        password.addTextChangedListener(new TextWatcher() {\r\n            @Override\r\n            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}\r\n            @Override\r\n            public void onTextChanged(CharSequence s, int start, int before, int count) {}\r\n            @Override\r\n            public void afterTextChanged(Editable s) {\r\n                if (s.length() != 0) isPassword = true;\r\n                else isPassword = false;\r\n                changeLoginButton();\r\n            }\r\n        });\r\n    }\r\n\r\n    private void changeLoginButton(){\r\n        if (isEmail && isPassword) login.setEnabled(true);\r\n        else login.setEnabled(false);\r\n    }\r\n\r\n    public void checkUser(View view){\r\n        String sEmail = email.getText().toString();\r\n        String sPassword = password.getText().toString();\r\n        if (findUser(sEmail, sPassword)) {\r\n            Intent bads = new Intent(this, MainActivity.class);\r\n            bads.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);\r\n            startActivity(bads);\r\n        }\r\n    }\r\n\r\n    private boolean findUser(String email, String password){\r\n        return true;\r\n    }\r\n\r\n    public void createProfile(View view){\r\n        Intent intent = new Intent (this, RegistrationActivity.class);\r\n        startActivity(intent);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/iherb3/LoginActivity.java	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/java/com/example/iherb3/LoginActivity.java	(date 1624109945521)
+@@ -74,4 +74,10 @@
+         Intent intent = new Intent (this, RegistrationActivity.class);
+         startActivity(intent);
+     }
++
++    public void openBads(View view){
++        Intent bads = new Intent(this, MainActivity.class);
++        bads.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
++        startActivity(bads);
++    }
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/container\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:paddingLeft=\"@dimen/activity_horizontal_margin\"\r\n    android:paddingTop=\"@dimen/activity_vertical_margin\"\r\n    android:paddingRight=\"@dimen/activity_horizontal_margin\"\r\n    android:paddingBottom=\"@dimen/activity_vertical_margin\"\r\n    android:orientation=\"vertical\"\r\n    android:background=\"@color/bright_green\"\r\n    android:gravity=\"top|center\">\r\n\r\n    <ImageView\r\n        android:layout_marginTop=\"40dp\"\r\n        android:layout_width=\"100dp\"\r\n        android:layout_height=\"100dp\"\r\n        android:background=\"@drawable/profile\"\r\n        android:layout_gravity=\"center\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/title\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:textSize=\"16sp\"\r\n        android:text=\"@string/welcome\" />\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"50dp\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"50dp\"\r\n        android:paddingLeft=\"10dp\"\r\n        android:paddingRight=\"30dp\"\r\n        android:background=\"@drawable/rounded_button\"\r\n        android:orientation=\"horizontal\">\r\n        <ImageView\r\n            android:layout_width=\"20dp\"\r\n            android:layout_height=\"20dp\"\r\n            android:layout_margin=\"6dp\"\r\n            android:background=\"@drawable/email\"/>\r\n        <EditText\r\n            android:id=\"@+id/email\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"6\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:textSize=\"14sp\"\r\n            android:hint=\"@string/prompt_email\"\r\n            android:inputType=\"textEmailAddress\"\r\n            android:selectAllOnFocus=\"true\"/>\r\n    </LinearLayout>\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"50dp\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"50dp\"\r\n        android:paddingLeft=\"10dp\"\r\n        android:paddingRight=\"30dp\"\r\n        android:background=\"@drawable/rounded_button\"\r\n        android:orientation=\"horizontal\">\r\n        <ImageView\r\n            android:layout_width=\"24dp\"\r\n            android:layout_height=\"24dp\"\r\n            android:layout_margin=\"6dp\"\r\n            android:background=\"@drawable/lock\"/>\r\n        <EditText\r\n            android:id=\"@+id/password\"\r\n            android:textSize=\"14sp\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"6\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:hint=\"@string/action_sign_in_short\"\r\n            android:imeActionLabel=\"@string/action_sign_in_short\"\r\n            android:imeOptions=\"actionDone\"\r\n            android:inputType=\"textPassword\"\r\n            android:selectAllOnFocus=\"true\" />\r\n    </LinearLayout>\r\n    <LinearLayout\r\n        android:layout_marginTop=\"10dp\"\r\n        android:layout_marginBottom=\"30dp\"\r\n        android:layout_marginLeft=\"25dp\"\r\n        android:layout_marginRight=\"25dp\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\">\r\n        <CheckBox\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_height=\"match_parent\"\r\n            android:text=\"Запомнить меня\"/>\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_height=\"match_parent\"\r\n            android:gravity=\"center\"\r\n            android:text=\"@string/forgot\"/>\r\n    </LinearLayout>\r\n\r\n    <androidx.appcompat.widget.AppCompatButton\r\n        android:id=\"@+id/login\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"48dp\"\r\n        android:layout_marginEnd=\"48dp\"\r\n        android:layout_marginBottom=\"24dp\"\r\n        android:paddingLeft=\"30dp\"\r\n        android:paddingRight=\"30dp\"\r\n        android:enabled=\"false\"\r\n        android:background=\"@drawable/rounded_button\"\r\n        android:onClick=\"checkUser\"\r\n        android:text=\"Войти\" />\r\n\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Нет аккаунта?\"/>\r\n\r\n    <androidx.appcompat.widget.AppCompatButton\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/create\"\r\n        android:paddingLeft=\"20dp\"\r\n        android:paddingRight=\"20dp\"\r\n        android:layout_marginTop=\"5dp\"\r\n        android:background=\"@drawable/rounded_button\"\r\n        android:onClick=\"createProfile\"/>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_login.xml	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/res/layout/activity_login.xml	(date 1624109945513)
+@@ -14,7 +14,7 @@
+     android:gravity="top|center">
+ 
+     <ImageView
+-        android:layout_marginTop="40dp"
++        android:layout_marginTop="20dp"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:background="@drawable/profile"
+@@ -83,7 +83,7 @@
+     </LinearLayout>
+     <LinearLayout
+         android:layout_marginTop="10dp"
+-        android:layout_marginBottom="30dp"
++        android:layout_marginBottom="20dp"
+         android:layout_marginLeft="25dp"
+         android:layout_marginRight="25dp"
+         android:layout_width="match_parent"
+@@ -131,4 +131,12 @@
+         android:background="@drawable/rounded_button"
+         android:onClick="createProfile"/>
+ 
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="20dp"
++        android:text="@string/withoutSign"
++        android:onClick="checkUser"/>
++
++
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_result.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".TestActivity\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        android:background=\"@color/bright_green\"\r\n        android:padding=\"15dp\">\r\n        <ImageView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_height=\"24dp\"\r\n            android:scaleType=\"centerCrop\"\r\n            android:background=\"@drawable/pill\"/>\r\n        <TextView\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"12\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"@string/bads\"\r\n            android:paddingLeft=\"12dp\"/>\r\n        <ImageView\r\n            android:id=\"@+id/menu\"\r\n            android:scaleType=\"centerCrop\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/menu\"/>\r\n    </LinearLayout>\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/results\"\r\n        android:textAlignment=\"center\"\r\n        android:layout_marginLeft=\"32dp\"\r\n        android:layout_marginRight=\"32dp\"\r\n        android:paddingTop=\"20dp\"\r\n        android:paddingBottom=\"42dp\"\r\n        android:textColor=\"@color/black\"/>\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"vertical\"\r\n        android:background=\"@color/light_green\"\r\n        android:gravity=\"center\"\r\n        android:paddingTop=\"25dp\"\r\n        android:paddingBottom=\"25dp\"\r\n        android:paddingLeft=\"50dp\"\r\n        android:paddingRight=\"50dp\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:layout_marginBottom=\"20dp\">\r\n        <TextView\r\n            android:id=\"@+id/resultMessage\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:textAlignment=\"center\"\r\n            android:text=\"resultMessage\"/>\r\n        <RadioGroup\r\n            android:id=\"@+id/answers\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\">\r\n        </RadioGroup>\r\n    </LinearLayout>\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\">\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_margin=\"25dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"@string/returnToBads\"\r\n            android:textAllCaps=\"false\"\r\n            android:textSize=\"14sp\"\r\n            android:letterSpacing=\"0\"\r\n            android:padding=\"5dp\"\r\n            android:background=\"@drawable/rounded_button\"\r\n            android:onClick=\"openBads\"/>\r\n        <androidx.appcompat.widget.AppCompatButton\r\n            android:id=\"@+id/programs\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_weight=\"1\"\r\n            android:layout_margin=\"25dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"@string/program\"\r\n            android:textAllCaps=\"false\"\r\n            android:textSize=\"14sp\"\r\n            android:letterSpacing=\"0\"\r\n            android:padding=\"5dp\"\r\n            android:background=\"@drawable/orange_button\"\r\n            android:enabled=\"false\"\r\n            android:onClick=\"openPrograms\"/>\r\n    </LinearLayout>\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_result.xml	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/res/layout/activity_result.xml	(date 1624095937153)
+@@ -95,7 +95,6 @@
+             android:letterSpacing="0"
+             android:padding="5dp"
+             android:background="@drawable/orange_button"
+-            android:enabled="false"
+             android:onClick="openPrograms"/>
+     </LinearLayout>
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_details.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_details.xml	(date 1624112989206)
++++ app/src/main/res/layout/activity_details.xml	(date 1624112989206)
+@@ -0,0 +1,109 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".TestActivity"
++    android:orientation="vertical">
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        android:background="@color/bright_green"
++        android:padding="15dp">
++        <ImageView
++            android:layout_width="0dp"
++            android:layout_weight="1"
++            android:layout_height="24dp"
++            android:scaleType="centerCrop"
++            android:background="@drawable/pill"/>
++        <TextView
++            android:layout_width="0dp"
++            android:layout_weight="12"
++            android:layout_height="wrap_content"
++            android:text="@string/bads"
++            android:paddingLeft="12dp"/>
++        <ImageView
++            android:id="@+id/menu"
++            android:scaleType="centerCrop"
++            android:layout_width="0dp"
++            android:layout_weight="1"
++            android:layout_height="match_parent"
++            android:background="@drawable/menu"/>
++    </LinearLayout>
++    <TextView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="Комплекс"
++        android:textColor="@color/black"
++        android:textSize="20sp"
++        android:textAlignment="center"
++        android:paddingTop="10dp"
++        android:paddingBottom="10dp"/>
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="vertical"
++        android:background="@drawable/rounded_button"
++        android:layout_margin="10dp">
++        <TextView
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:text="Омега-3"
++            android:padding="5dp"
++            android:textSize="20sp"
++            android:textAlignment="center"/>
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="90dp"
++            android:orientation="horizontal">
++
++            <ImageView
++                android:layout_width="0dp"
++                android:layout_weight="1"
++                android:layout_height="90dp"/>
++            <RadioGroup
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content">
++                <RadioButton
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:text="способствует очищению стенок сосудов от холестерина"
++            </RadioGroup>
++        </LinearLayout>
++
++    </LinearLayout>
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal">
++        <androidx.appcompat.widget.AppCompatButton
++            android:layout_width="0dp"
++            android:layout_weight="1"
++            android:layout_margin="25dp"
++            android:layout_height="wrap_content"
++            android:text="Вернуться к программам"
++            android:textAllCaps="false"
++            android:textSize="14sp"
++            android:letterSpacing="0"
++            android:padding="5dp"
++            android:background="@drawable/rounded_button"
++            android:onClick="openBads"/>
++        <androidx.appcompat.widget.AppCompatButton
++            android:id="@+id/programs"
++            android:layout_width="0dp"
++            android:layout_weight="1"
++            android:layout_margin="25dp"
++            android:layout_height="wrap_content"
++            android:text="Выбрать программу"
++            android:textAllCaps="false"
++            android:textSize="14sp"
++            android:letterSpacing="0"
++            android:paddingLeft="15dp"
++            android:paddingRight="15dp"
++            android:background="@drawable/orange_button"
++            android:onClick="openPrograms"/>
++    </LinearLayout>
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/iherb3/DetailsActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/iherb3/DetailsActivity.java	(date 1624112200662)
++++ app/src/main/java/com/example/iherb3/DetailsActivity.java	(date 1624112200662)
+@@ -0,0 +1,14 @@
++package com.example.iherb3;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class DetailsActivity extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_details);
++    }
++}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.iherb3\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.Iherb3\">\r\n        <activity android:name=\".RegistrationActivity\"></activity>\r\n        <activity android:name=\".ProgramsActivity\" />\r\n        <activity android:name=\".ResultActivity\" />\r\n        <activity android:name=\".CalendarActivity\" />\r\n        <activity android:name=\".TestActivity\" />\r\n        <activity android:name=\".ProfileActivity\" />\r\n        <activity android:name=\".LoginActivity\" />\r\n        <activity android:name=\".MainActivity\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision dcfbc336bab16aae064eb5f7734b1b1c61215125)
++++ app/src/main/AndroidManifest.xml	(date 1624112200349)
+@@ -9,7 +9,8 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/Theme.Iherb3">
+-        <activity android:name=".RegistrationActivity"></activity>
++        <activity android:name=".DetailsActivity"></activity>
++        <activity android:name=".RegistrationActivity" />
+         <activity android:name=".ProgramsActivity" />
+         <activity android:name=".ResultActivity" />
+         <activity android:name=".CalendarActivity" />

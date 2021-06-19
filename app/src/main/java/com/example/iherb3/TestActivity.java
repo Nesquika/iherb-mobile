@@ -97,6 +97,7 @@ public class TestActivity extends AppCompatActivity {
             radioGroup.removeViewAt(i);
         }
         status.setText("Вопрос "+ (num+1) + " из " + questions.length);
+        finish.setEnabled(false);
         for (int i = 0; i < answers[num].length; i++) {
             RadioButton rb = new RadioButton(this);
             rb.setText(answers[num][i]);
