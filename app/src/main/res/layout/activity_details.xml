@@ -295,6 +295,7 @@
             android:letterSpacing="0"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
+            android:onClick="openPlan"
             android:background="@drawable/orange_button"/>
     </LinearLayout>
 </LinearLayout>
