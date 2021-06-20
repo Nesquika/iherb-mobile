@@ -41,7 +41,7 @@ public class ProgramsActivity extends AppCompatActivity {
                         startActivity(intent);
                         return true;
                     case R.id.menu2:
-                        intent = new Intent(getBaseContext(), CalendarActivity.class);
+                        intent = new Intent(getBaseContext(), DayActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         return true;
