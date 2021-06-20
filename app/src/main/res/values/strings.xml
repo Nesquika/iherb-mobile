@@ -10,8 +10,8 @@
     <string name="title_activity_login">Вход</string>
     <string name="filter">Применить фильтры:</string>
     <string name="bads">Подборка БАДов</string>
-    <string name="results">Результаты тестирования</string>
-    <string name="returnToBads">Вернуться к списку БАДов</string>
+    <string name="results">Ваш iHerb результат</string>
+    <string name="returnToBads">Вернуться в каталог</string>
     <string name="finishTest">Завершить тестирование</string>
     <string name="res">Завершить тестирование</string>
     <string name="program">Посмотреть программы</string>
@@ -19,14 +19,9 @@
     <string name="withoutSign"><u>Продолжить без входа</u></string>
     <string name="more">Подробнее</string>
 
-    <string name="resultMessage">Согласно введённым данным, причиной Ваших "неудобств" может стать недостаток </string>
+    <string name="resultMessage1">Среди <font color="@colors/green">ключевых компонентов</font> Вашей индивидуальной программы от iHerb Dairy должен стать </string>
+    <string name="resultMessage2"> может компенсироваться разнынми программами</string>
     <string name="beforeTest">Предлагаем пройти несложный тест, чтобы подобрать БАД, который подойдёт именно Вам.</string>
 
-    <string-array name="filters">
-        <item>Фильтр 1</item>
-        <item>Фильтр 2</item>
-        <item>Фильтр 3</item>
-        <item>Фильтр 4</item>
-    </string-array>
 
 </resources>

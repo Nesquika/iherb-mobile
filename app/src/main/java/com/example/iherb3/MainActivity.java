@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 
@@ -42,17 +43,17 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {Intent intent;
                         switch (item.getItemId()) {
                             case R.id.menu1:
-                                intent = new Intent(getBaseContext(), ProfileActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                                startActivity(intent);
-                                return true;
-                            case R.id.menu2:
                                 intent = new Intent(getBaseContext(), TestActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                 startActivity(intent);
                                 return true;
-                            case R.id.menu3:
+                            case R.id.menu2:
                                 intent = new Intent(getBaseContext(), CalendarActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                                startActivity(intent);
+                                return true;
+                            case R.id.menu3:
+                                intent = new Intent(getBaseContext(), ProgramsActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                 startActivity(intent);
                                 return true;

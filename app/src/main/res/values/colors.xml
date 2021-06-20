@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bright_green">#6FC215</color>
+    <color name="dark_green">#63A23C</color>
     <color name="white">#FFFFFF</color>
-    <color name="light_green">#DFEFC3</color>
+    <color name="light_green">#D9E8CE</color>
     <color name="transp_white">#BDFFFFFF</color>
     <color name="black">#000</color>
     <color name="orange">#FFC107</color>
+    <color name="light_grey">#E4E4E4</color>
+    <color name="green">#63A23C</color>
+    <color name="dark_grey">#5A5A5A</color>
+    <color name="grey">#919191</color>
+    <color name="grey_transp">#A6C6C6C6</color>
+    <color name="beidge">#F1E4D0</color>
+
 </resources>

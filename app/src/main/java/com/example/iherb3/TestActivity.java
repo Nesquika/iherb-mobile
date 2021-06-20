@@ -59,30 +59,29 @@ public class TestActivity extends AppCompatActivity {
 
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Intent intent;
+            public boolean onMenuItemClick(MenuItem item) {Intent intent;
                 switch (item.getItemId()) {
                     case R.id.menu1:
-                        intent = new Intent(getBaseContext(), ProfileActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                        startActivity(intent);
-                        return true;
-                    case R.id.menu2:
                         intent = new Intent(getBaseContext(), TestActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         return true;
-                    case R.id.menu3:
+                    case R.id.menu2:
                         intent = new Intent(getBaseContext(), CalendarActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                        startActivity(intent);
+                        return true;
+                    case R.id.menu3:
+                        intent = new Intent(getBaseContext(), ProgramsActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         return true;
                     default:
                         return false;
                 }
-
             }
         });
+
 
         popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {
             @Override
@@ -97,7 +96,6 @@ public class TestActivity extends AppCompatActivity {
             radioGroup.removeViewAt(i);
         }
         status.setText("Вопрос "+ (num+1) + " из " + questions.length);
-        finish.setEnabled(false);
         for (int i = 0; i < answers[num].length; i++) {
             RadioButton rb = new RadioButton(this);
             rb.setText(answers[num][i]);
@@ -110,18 +108,18 @@ public class TestActivity extends AppCompatActivity {
                             new int[]{-android.R.attr.state_enabled},
                             new int[]{android.R.attr.state_enabled}},
                     new int[] {
-                            Color.WHITE,Color.BLACK})
+                            Color.WHITE,Color.WHITE})
             );
             rb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
                 @Override
                 public void onCheckedChanged(CompoundButton rb, boolean isChecked){
                     if (isChecked) {
                         rb.setBackground(AppCompatResources.getDrawable(getBaseContext(), R.drawable.radio_active));
-                        finish.setEnabled(true);
+                        rb.setTextColor(Color.WHITE);
                     }
                     else {
                         rb.setBackground(AppCompatResources.getDrawable(getBaseContext(), R.drawable.radio));
-                        //finish.setEnabled(false);
+                        rb.setTextColor(Color.BLACK);
                     }
                 }
             });
@@ -150,13 +148,8 @@ public class TestActivity extends AppCompatActivity {
     }
 
     private void checkButton() {
-        if (count == questions.length-1) {
-            finish.setText(getResources().getString(R.string.finishTest));
-            finish.setOnClickListener(this::finishTest);
-        } else {
-            finish.setText("Следующий вопрос");
-            finish.setOnClickListener(this::openNextQuestion);
-        }
+        if (count == questions.length-1) finish.setEnabled(true);
+        else finish.setEnabled(false);
     }
 
     public void finishTest(View view){

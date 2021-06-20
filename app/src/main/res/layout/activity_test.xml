@@ -5,26 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/back">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/bright_green"
-        android:padding="15dp">
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="24dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/pill"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="12"
-            android:layout_height="wrap_content"
-            android:text="@string/bads"
-            android:paddingLeft="12dp"/>
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
         <ImageView
             android:id="@+id/menu"
             android:scaleType="centerCrop"
@@ -32,17 +23,34 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:background="@drawable/menu"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="Подбор программы"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"/>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        android:layout_gravity="center" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/beforeTest"
         android:textAlignment="center"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="42dp"
-        android:textColor="@color/black"/>
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:paddingBottom="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/dark_green"
+        android:textStyle="bold"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +58,8 @@
         android:layout_gravity="center">
         <ImageView
             android:layout_width="25dp"
-            android:layout_height="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="2sp"
             android:rotation="180"
             android:background="@drawable/arrow"
             android:onClick="openPreviousQuestion"/>
@@ -60,11 +69,13 @@
             android:layout_height="wrap_content"
             android:text="Вопрос 1 из 20"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
         <ImageView
             android:layout_width="25dp"
-            android:layout_height="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="2sp"
             android:background="@drawable/arrow"
             android:onClick="openNextQuestion"/>
     </LinearLayout>
@@ -72,7 +83,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/light_green"
+        android:background="@drawable/round_light_green"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:paddingTop="25dp"
         android:paddingBottom="25dp"
@@ -85,42 +97,70 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             android:text="Принимаете ли Вы в настоящий момент БАДы?"/>
         <RadioGroup
             android:id="@+id/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </RadioGroup>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="&lt; Предыдущий"
+                android:onClick="openPreviousQuestion"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=" Следующий >"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:onClick="openNextQuestion"/>
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_margin="25dp"
             android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_dark_green"
+            android:letterSpacing="0"
+            android:onClick="openBads"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:text="@string/returnToBads"
             android:textAllCaps="false"
-            android:textSize="14sp"
-            android:letterSpacing="0"
-            android:padding="5dp"
-            android:background="@drawable/rounded_button"
-            android:onClick="openBads"/>
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/finish"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_margin="25dp"
             android:layout_height="wrap_content"
-            android:text="Следующий вопрос"
-            android:textAllCaps="false"
-            android:textSize="14sp"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_dark_green"
             android:letterSpacing="0"
+            android:onClick="finishTest"
             android:padding="5dp"
-            android:background="@drawable/orange_button"
-            android:enabled="false"
-            android:onClick="finishTest"/>
+            android:text="Закончить тестирование"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:enabled="false"/>
     </LinearLayout>
 </LinearLayout>
