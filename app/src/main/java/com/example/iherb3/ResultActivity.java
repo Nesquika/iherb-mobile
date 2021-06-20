@@ -23,7 +23,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         result = findViewById(R.id.resultMessage);
-        result.setText(getResources().getText(R.string.resultMessage1 ) + " витамин");
+        result.setText(getResources().getText(R.string.resultMessage1 ) + " Магний.");
         menu = findViewById(R.id.menu);
         menu.setOnClickListener(viewClickListener);
         btn = findViewById(R.id.btnOpenProgs);
@@ -74,7 +74,7 @@ public class ResultActivity extends AppCompatActivity {
                         startActivity(intent);
                         return true;
                     case R.id.menu3:
-                        intent = new Intent(getBaseContext(), ProgramsActivity.class);
+                        intent = new Intent(getBaseContext(), MyProgramActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         return true;

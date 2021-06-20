@@ -10,14 +10,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="@color/light_green"
+    android:background="@drawable/back"
     android:gravity="top|center">
 
     <ImageView
-        android:layout_marginTop="40dp"
-        android:layout_width="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="270dp"
         android:layout_height="100dp"
-        android:background="@drawable/profile"
+        android:background="@drawable/logo"
         android:layout_gravity="center" />
 
     <TextView
@@ -25,17 +25,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Регистрация"
-        android:textSize="16sp" />
-
+        android:textSize="16sp"
+        android:text="Регистрация пользователя"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="15dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
         android:paddingLeft="10dp"
         android:paddingRight="30dp"
-        android:background="@drawable/rounded_button"
+        android:background="@drawable/round_white_transp"
         android:orientation="horizontal">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/email"/>
         <EditText
             android:id="@+id/email"
             android:layout_width="0dp"
@@ -51,11 +59,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
         android:paddingLeft="10dp"
         android:paddingRight="30dp"
-        android:background="@drawable/rounded_button"
+        android:background="@drawable/round_white_transp"
         android:orientation="horizontal">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/lock"/>
         <EditText
             android:id="@+id/password"
             android:textSize="14sp"
@@ -68,57 +83,17 @@
             android:inputType="textPassword"
             android:selectAllOnFocus="true" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@drawable/rounded_button"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Пол"/>
-        <RadioGroup
-            android:orientation="horizontal"
-            android:layout_width="0dp"
-            android:layout_weight="5"
-            android:layout_height="wrap_content"
-            android:id="@+id/gender">
-            <RadioButton
-                android:id="@+id/male"
-                android:text="Мужской"
-                android:textSize="14sp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:selectAllOnFocus="true" />
-
-            <RadioButton
-                android:text="Женский"
-                android:id="@+id/female"
-                android:textSize="14sp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:selectAllOnFocus="true" />
-        </RadioGroup>
-    </LinearLayout>
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/rounded_button"
-        android:enabled="false"
-        android:onClick="createProfile"
+        android:text="@string/create"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text="@string/create" />
+        android:layout_marginTop="45dp"
+        android:textColor="@color/white"
+        android:background="@drawable/round_dark_grey"
+        android:onClick="createProfile"/>
 
 </LinearLayout>

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 return true;
                             case R.id.menu3:
-                                intent = new Intent(getBaseContext(), ProgramsActivity.class);
+                                intent = new Intent(getBaseContext(), MyProgramActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                 startActivity(intent);
                                 return true;

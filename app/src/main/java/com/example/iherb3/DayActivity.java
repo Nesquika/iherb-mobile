@@ -11,8 +11,6 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class DayActivity extends AppCompatActivity {
     ImageView menu;
@@ -72,7 +70,7 @@ public class DayActivity extends AppCompatActivity {
                         startActivity(intent);
                         return true;
                     case R.id.menu3:
-                        intent = new Intent(getBaseContext(), ProgramsActivity.class);
+                        intent = new Intent(getBaseContext(), MyProgramActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         return true;

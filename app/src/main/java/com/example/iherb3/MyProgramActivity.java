@@ -9,13 +9,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 
-public class ProgramsActivity extends AppCompatActivity {
+public class MyProgramActivity extends AppCompatActivity {
     ImageView menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_programs);
+        setContentView(R.layout.activity_my_program);
         menu = findViewById(R.id.menu);
         menu.setOnClickListener(viewClickListener);
     }
@@ -33,7 +33,8 @@ public class ProgramsActivity extends AppCompatActivity {
 
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {Intent intent;
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent;
                 switch (item.getItemId()) {
                     case R.id.menu1:
                         intent = new Intent(getBaseContext(), TestActivity.class);
@@ -63,8 +64,8 @@ public class ProgramsActivity extends AppCompatActivity {
         popupMenu.show();
     }
 
-    public void openDetails (View view){
-        Intent intent = new Intent(this, DetailsActivity.class);
+    public void openBads(View view){
+        Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }

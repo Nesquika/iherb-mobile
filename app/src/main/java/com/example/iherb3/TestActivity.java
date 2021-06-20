@@ -23,8 +23,17 @@ public class TestActivity extends AppCompatActivity {
     ImageView menu;
     RadioGroup radioGroup;
     TextView question, status;
-    String[] questions = {"Вы пьёте БАДы?", "Второй вопрос?", "Третий вопрос?"};
-    String[][] answers = {{"Да, регулярно", "Нет, но планирую начать"},{"Первый ответ", "Второй ответ"}, {"Первый ответ", "Второй ответ"}};
+    String[] questions = {"Принимаете ли вы какие-либо БАДы?",
+            "Какой образ жизни Вы ведете?",
+            "Есть ли у Вас аллергии?",
+            "Какую основную цель вы преследуете?",
+            "Замечали ли Вы, что начали чаще уставать, снизилась работоспособность?"};
+    String[][] answers = {
+            {"Да, я уже принимаю некоторые препараты", "Нет, но планирую начать"},
+            {"Малоподвижный", "Нерегулярно тренируюсь", "Занятия спортом не реже двух раз в неделю", "Интенсивно занимаюсь спортом"},
+            {"Да, я аллергик", "Нет"},
+            {"Набрать массу","Улучшить структуры волос/ногтей", "Укрепить кости", "Профилактика простуды и гриппа"},
+            {"Да","Нет"}};
     int[] actualAnswers;
     Button finish;
     int count;
@@ -72,7 +81,7 @@ public class TestActivity extends AppCompatActivity {
                         startActivity(intent);
                         return true;
                     case R.id.menu3:
-                        intent = new Intent(getBaseContext(), ProgramsActivity.class);
+                        intent = new Intent(getBaseContext(), MyProgramActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         return true;
