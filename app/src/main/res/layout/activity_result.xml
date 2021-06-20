@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestActivity"
+    tools:context=".ResultActivity"
     android:orientation="vertical"
     android:background="@drawable/back">
 
@@ -111,7 +111,6 @@
             android:layout_weight="1"
             android:background="@drawable/orange_button"
             android:letterSpacing="0"
-            android:onClick="openPrograms"
             android:padding="5dp"
             android:text="Посмотреть программы"
             android:textAllCaps="false"
